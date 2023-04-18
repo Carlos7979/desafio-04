@@ -1,0 +1,22 @@
+<div>
+	<h1>Hello : )</h1>
+	<form action="/products" method="POST">
+		<input type="text" name="title" placeholder="Ingresa un título">
+		<input type="text" name="description" placeholder="Ingresa una descripción">
+		<input type="text" name="price" placeholder="Ingresa un precio">
+		<input type="text" name="thumbnail" placeholder="Ingresa la url de una imagen">
+		<input type="text" name="code" placeholder="Ingresa un código">
+		<input type="text" name="stock" placeholder="Ingresa un número de stock">
+		<button>Enviar</button>
+	</form>
+	{{#each products}}
+	<div>
+		<p>
+			Id: {{this.id}}
+		</p>
+		<p>
+			Título: {{this.title}}
+		</p>
+	</div>
+	{{/each}}
+</div>

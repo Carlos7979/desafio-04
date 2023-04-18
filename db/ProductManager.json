@@ -115,5 +115,14 @@
     "code": "abc13",
     "stock": 25,
     "id": "13"
+  },
+  {
+    "title": "Galletas",
+    "description": "Galletas con sabor a limón",
+    "price": "1",
+    "thumbnail": "https://images.hola.com/imagenes/cocina/recetas/20200902174521/galletas-esponjosas-limon/0-860-699/galletas-age-t.jpg",
+    "code": "abc14",
+    "stock": "38",
+    "id": "14"
   }
 ]

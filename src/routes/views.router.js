@@ -12,4 +12,14 @@ router.get('/', async (req, res) => {
 	}
 })
 
+router.get('/realtimeproducts', async (req, res) => {
+	const products = await Product.getProducts()
+	try {
+		
+		res.render('realTimeProducts', { products })
+	} catch (error) {
+		console.log(error);
+	}
+})
+
 module.exports = router;
