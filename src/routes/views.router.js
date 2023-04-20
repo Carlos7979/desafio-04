@@ -2,11 +2,11 @@ const { Router } = require('express');
 const { Product } = require('../data');
 const router = Router();
 
-router.get('/', async (req, res) => {
+router.get('/home', async (req, res) => {
 	const products = await Product.getProducts()
 	try {
 		
-		res.render('index', { products })
+		res.render('home', { products })
 	} catch (error) {
 		console.log(error);
 	}

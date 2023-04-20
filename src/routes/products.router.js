@@ -19,10 +19,10 @@ router.post('/', async (req, res) => {
             const product = await Product.addProduct(
 				title,
 				description,
-				price,
+				Number(price),
 				thumbnail,
 				code,
-				stock
+				Number(stock)
 			)
             res.send({ status: "success", payload: product })
         } catch (error) {

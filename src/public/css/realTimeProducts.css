@@ -1,4 +1,10 @@
 
+ul {
+	list-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-left: 10px;
+}
+
 .card-container {
 	margin: 10px 0;
 }
