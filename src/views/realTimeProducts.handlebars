@@ -9,14 +9,28 @@
 		<input type="text" name="stock" placeholder="Ingresa un número de stock">
 		<button>Enviar</button>
 	</form>
-	{{#each products}}
 	<div>
-		<p>
-			Id: {{this.id}}
-		</p>
-		<p>
-			Título: {{this.title}}
-		</p>
+		<button id="button-emit-for-all" onclick="emitForAll()">Mensaje para todos (incluyéndome)</button>
+		<button id="button-emit-for-all" onclick="emitForAllExceptMe()">Mensaje para los demás</button>
 	</div>
-	{{/each}}
+	<div class="card-container">
+		{{#each products}}
+		<div class="card">
+			<ul>
+				<li>
+					Id: {{this.id}}
+				</li>
+				<li>
+					Título: {{this.title}}
+				</li>
+				<li>Precio: {{this.price}}</li>
+				<li><img class="card-img" src={{this.thumbnail}} alt=""></li>
+				<li>Código: {{this.code}}</li>
+				<li>Stock: {{this.stock}}</li>
+			</ul>
+		</div>
+		{{/each}}
+	</div>
 </div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/static/js/socket.js"></script>
