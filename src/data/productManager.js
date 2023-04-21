@@ -13,27 +13,29 @@ class ProductManager {
 			let products = await fs.promises.readFile(this.path, {encoding: 'utf8'})
 			products = JSON.parse(products)
 			if (products.some(e => e.code === code)) throw Error('El valor de code debe ser único')
-			products.push({
+			const product = {
 				title,
 				description,
 				price,
 				thumbnail,
 				code,
 				stock,
-				id: (products.length + 1).toString()
-			});
+				id: (products[0].idCounter + 1).toString()
+			}
+			products.push(product);
+			products[0].idCounter += 1
 			const productsJSON = JSON.stringify(products, null, 2)
 			await fs.promises.writeFile(this.path, productsJSON, {encoding: 'utf8'})
-			return products
+			return product
 		} catch (error) {
 			console.log(error)
 		}
     }
     async getProducts() {
 		try {
-			console.log(this.path);
 			let products = await fs.promises.readFile(this.path, {encoding: 'utf8'})
 			products = JSON.parse(products)
+			products.shift()
 			return products
 		} catch (error) {
 			console.log(error)
@@ -55,6 +57,7 @@ class ProductManager {
         try {
             let products = await fs.promises.readFile(this.path, { encoding: 'utf8' });
             products = JSON.parse(products);
+			products.shift()
             let index;
             const product = products.find((e, i) => {
                 if (e.id === id) {

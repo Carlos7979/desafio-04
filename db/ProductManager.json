@@ -1,128 +1,50 @@
 [
   {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
+    "idCounter": 5
+  },
+  {
+    "title": "Galletas",
+    "description": "Galletas de mantequilla",
+    "price": 28,
+    "thumbnail": "https://cdn7.kiwilimon.com/recetaimagen/11964/5073.jpg",
     "code": "abc1",
-    "stock": 25,
+    "stock": 10,
     "id": "1"
   },
   {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
+    "title": "Galletas",
+    "description": "Galletas con sabor a canela",
+    "price": 31,
+    "thumbnail": "https://cecotec.es/recetas/wp-content/uploads/2019/09/Mambo-galletas-jengibre.jpg",
     "code": "abc2",
-    "stock": 25,
+    "stock": 20,
     "id": "2"
   },
   {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
+    "title": "Galletas",
+    "description": "Galletas de jengibre",
+    "price": 15,
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlP-USG8XQtDF1DPLJmF7L_8mseMkNALr3zvoqyzCqxaFf-lj2c82c2g4tC8WysetN_2g&usqp=CAU",
     "code": "abc3",
-    "stock": 25,
+    "stock": 51,
     "id": "3"
   },
   {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
+    "title": "Galletas",
+    "description": "Galletas con chispas de chocolate",
+    "price": 12,
+    "thumbnail": "https://elmundoenrecetas.s3.amazonaws.com/uploads/recipe/picture/311/IMG_3256-500.jpg",
     "code": "abc4",
     "stock": 25,
     "id": "4"
   },
   {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
-    "code": "abc5",
-    "stock": 25,
-    "id": "5"
-  },
-  {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
-    "code": "abc6",
-    "stock": 25,
-    "id": "6"
-  },
-  {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
-    "code": "abc7",
-    "stock": 25,
-    "id": "7"
-  },
-  {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
-    "code": "abc8",
-    "stock": 25,
-    "id": "8"
-  },
-  {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
-    "code": "abc9",
-    "stock": 25,
-    "id": "9"
-  },
-  {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
-    "code": "abc10",
-    "stock": 25,
-    "id": "10"
-  },
-  {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
-    "code": "abc11",
-    "stock": 25,
-    "id": "11"
-  },
-  {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 200,
-    "thumbnail": "Sin imagen",
-    "code": "abc12",
-    "stock": 25,
-    "id": "12"
-  },
-  {
-    "title": "producto prueba",
-    "description": "Este es un producto prueba",
-    "price": 320,
-    "thumbnail": "Sin imagen",
-    "code": "abc13",
-    "stock": 25,
-    "id": "13"
-  },
-  {
     "title": "Galletas",
     "description": "Galletas con sabor a limón",
-    "price": 1,
+    "price": "1",
     "thumbnail": "https://images.hola.com/imagenes/cocina/recetas/20200902174521/galletas-esponjosas-limon/0-860-699/galletas-age-t.jpg",
     "code": "abc14",
-    "stock": 38,
-    "id": "14"
+    "stock": "38",
+    "id": "5"
   }
 ]

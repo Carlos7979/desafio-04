@@ -1,6 +1,6 @@
 <div>
 	<h1>Hello : )</h1>
-	<form action="/products" method="POST">
+	<form id="add-product" action="/products" method="POST">
 		<input type="text" name="title" placeholder="Ingresa un título">
 		<input type="text" name="description" placeholder="Ingresa una descripción">
 		<input type="number" name="price" placeholder="Ingresa un precio">
@@ -13,9 +13,8 @@
 		<button id="button-emit-for-all" onclick="emitForAll()">Mensaje para todos (incluyéndome)</button>
 		<button id="button-emit-for-all" onclick="emitForAllExceptMe()">Mensaje para los demás</button>
 	</div>
-	<div class="card-container">
-		{{#each products}}
-		<div class="card">
+	<div id="card-container" class="card-container">
+		{{!-- <div class="card">
 			<ul>
 				<li>
 					Id: {{this.id}}
@@ -28,8 +27,7 @@
 				<li>Código: {{this.code}}</li>
 				<li>Stock: {{this.stock}}</li>
 			</ul>
-		</div>
-		{{/each}}
+		</div> --}}
 	</div>
 </div>
 <script src="/socket.io/socket.io.js"></script>

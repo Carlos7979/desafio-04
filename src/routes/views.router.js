@@ -13,10 +13,11 @@ router.get('/home', async (req, res) => {
 })
 
 router.get('/realtimeproducts', async (req, res) => {
-	const products = await Product.getProducts()
+	// const products = await Product.getProducts()
 	try {
 		
-		res.render('realTimeProducts', { products })
+		// res.render('realTimeProducts', { products })
+		res.render('realTimeProducts')
 	} catch (error) {
 		console.log(error);
 	}

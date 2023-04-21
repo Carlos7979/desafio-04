@@ -1,3 +1,5 @@
+const productManager = require("../data/productManager");
+
 const socketServer = (io) => {
 	io.on('connection', socket => {
 		console.log('Nuevo cliente conectado → clientId: ' + socket.client.id + ' y socketId: ' + socket.id);
@@ -17,9 +19,47 @@ const socketServer = (io) => {
 			})
 		})
 		socket.emit('event-for-one-socket', {
-			message: 'cliente conectado → clientId: ' + socket.client.id + ' y socketId: ' + socket.id
+			message: 'cliente conectado',
+			clientId: socket.client.id,
+			socketId: socket.id
 		})
 	})
 }
 
-module.exports = socketServer
+const socketProducts =  (io) => {
+	io.on('connection', async socket => {
+		try {
+			const products = await productManager.getProducts()
+			socket.emit('products', {
+				status: 'success',
+				payload: products
+			})
+			socket.on('add-product', async data => {
+				const { title, description, price, thumbnail, code, stock } = data
+				const product = await productManager.addProduct(title, description, price, thumbnail, code, stock)
+				if (product) {
+					io.emit('products', {
+						status: 'success',
+						payload: [ product ]
+					})
+				}
+			})
+			socket.on('delete-card', async data => {
+				const product = await productManager.deleteProduct(data)
+				if (product !== 'Not found') {
+					io.emit('card-deleted', {
+						status: 'success',
+						payload: data
+					})
+				}
+			})
+		} catch (error) {
+			console.log(error);
+		}
+	})
+}
+
+module.exports = {
+	socketServer,
+	socketProducts
+}
